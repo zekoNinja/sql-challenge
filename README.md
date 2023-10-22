@@ -9,7 +9,7 @@ For this project, I designed the tables to hold the data from the CSV files, imp
 
 
 
-I started with using: [QuickDBD][https://app.quickdatabasediagrams.com/#/] in order to construct my Entity-Relationship Diagram (ERD). ERD is a visual representation used in database design to model the structure of a database. I was able to connect and find relationships between the six tables for my Primary and Foreign Keys:
+I started with using: [QuickDBD](https://app.quickdatabasediagrams.com/#/)in order to construct my Entity-Relationship Diagram (ERD). ERD is a visual representation used in database design to model the structure of a database. I was able to connect and find relationships between the six tables for my Primary and Foreign Keys:
 
 My fist step, Here is a snapshot of the ERD Diagram:
 
