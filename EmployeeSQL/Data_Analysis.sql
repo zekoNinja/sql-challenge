@@ -17,7 +17,7 @@ JOIN salaries ON employees.emp_no = salaries.emp_no
 order by salaries.emp_no;
 
 -- Extracting the columns : first name, last name and hire date based on a filter condition where employees 
--- where only hired in year of 1986 (ask #2)
+-- where only hired in year of 1986 (ask #2).
 SELECT first_name, last_name, hire_date from employees
 WHERE EXTRACT(YEAR FROM hire_date) = 1986
 ORDER BY hire_date;
@@ -45,3 +45,32 @@ ORDER BY dept_emp.emp_no;
 --List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B.
 SELECT first_name, last_name, sex FROM employees
 WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
+
+
+-- ask #6
+-- Listing each employee in the Sales department, including their employee number, last name, and first name.
+SELECT dept_emp.emp_no,dept_emp.dept_no, departments.dept_name,employees.last_name,employees.first_name
+FROM dept_emp
+JOIN departments ON  dept_emp.dept_no = departments.dept_no
+JOIN employees ON dept_emp.emp_no = employees.emp_no
+WHERE departments.dept_name = 'Sales'
+order by employees.emp_no;
+
+-- ask #7
+-- Listing each employee in the Sales and Development departments, including their employee number, last name, first name, and department name
+SELECT dept_emp.emp_no,dept_emp.dept_no, departments.dept_name,employees.last_name,employees.first_name
+FROM dept_emp
+JOIN departments ON  dept_emp.dept_no = departments.dept_no
+JOIN employees ON dept_emp.emp_no = employees.emp_no
+WHERE departments.dept_name = 'Sales' OR departments.dept_name = 'Development'
+order by employees.emp_no;
+
+-- ask #8 (how many times a single last_name is repeated in the data)
+-- List the frequency counts, in descending order, of all the employee last names (that is, how many employees share each last name).
+SELECT last_name, COUNT(*) as count_last_name
+FROM employees
+GROUP BY last_name
+ORDER BY count_last_name DESC;
+
+
+
