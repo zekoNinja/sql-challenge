@@ -7,7 +7,9 @@ It is been two weeks since you were hired as a new data engineer at Pewlett Hack
 For this project, I designed the tables to hold the data from the CSV files, import the CSV files into a SQL database, and then answer questions about the data. That is, I also perform data modeling, data engineering, and data analysis, respectively.
 
 
-I started with using: [QuickDBD] [https://app.quickdatabasediagrams.com/#/] in order to construct my Entity-Relationship Diagram (ERD). ERD is a visual representation used in database design to model the structure of a database. I was able to connect and find relationships between the six tables for my Primary and Foreign Keys:
+
+
+I started with using: [QuickDBD][https://app.quickdatabasediagrams.com/#/] in order to construct my Entity-Relationship Diagram (ERD). ERD is a visual representation used in database design to model the structure of a database. I was able to connect and find relationships between the six tables for my Primary and Foreign Keys:
 
 My fist step, Here is a snapshot of the ERD Diagram:
 
